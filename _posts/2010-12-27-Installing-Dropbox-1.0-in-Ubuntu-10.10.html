@@ -1,0 +1,25 @@
+---
+layout: post
+title:  "Installing Dropbox 1.0 in Ubuntu 10.10"
+date:   2010-12-27 17:03:00
+tags: dropbox ubuntu
+---
+
+<a href="http://www.dropbox.com/">Dropbox</a> recently released a new 1.0 client for all platforms with several new features.  Particularly, the selective folder syncing would be very helpful for the Ubuntu netbook my wife uses.  However, the Dropbox website only offers Linux downloads for the 0.6.7 version.  Strange.<br />
+<div>
+<br /></div>
+<div>
+A little googling led to this <a href="http://forums.dropbox.com/topic.php?id=29015">forum discussion</a>, which linked to this <a href="http://forums.dropbox.com/topic.php?id=29000&amp;replies=46#post-182280">forum post</a> and this French-language <a href="http://blog.nicolargo.com/2010/12/comment-installer-vraiment-dropbox-1-0-sous-gnulinux.html">blog posting</a>.  The steps are quite easy, but it's bothersome that Dropbox hasn't made this obvious.  The download and installation process is seamless for both other platforms.</div>
+<div>
+<ol>
+<li>Stop the Dropbox client to your home folder.</li>
+<li>Download the appropriate 1.0.10 linux client for <a href="http://dl-web.dropbox.com/u/17/dropbox-lnx.x86-1.0.10.tar.gz">x86</a> or <a href="http://dl-web.dropbox.com/u/17/dropbox-lnx.x86_64-1.0.10.tar.gz">x86_64</a>.</li>
+<li>Rename or delete the '.dropbox-dist' folder (in a terminal at ~, <span class="Apple-style-span">mv .dropbox-dist .dropbox-dist.backup</span>).</li>
+<li>Unpack the downloaded client archive (<span class="Apple-style-span">tar zxvf dropbox-lnx.x86-1.0.10.tar.gz</span>).</li>
+<li>Restart the Dropbox client from the Ubuntu menu (Applications -&gt; Internet -&gt; Dropbox).</li>
+</ol>
+The Dropbox icon should appear in the Ubuntu notification area.  The new version (1.0.10) should show in the Preferences window, on the Account tab.</div>
+<div>
+<br /></div>
+<div>
+<i>Update 1/31/2011: I installed Dropbox on my new laptop Ubuntu install using the 0.6.7 installer downloaded from the website.  After installing, it immediately downloaded an update to the 1.0.20 version.  Thanks, Dropbox team.</i></div>

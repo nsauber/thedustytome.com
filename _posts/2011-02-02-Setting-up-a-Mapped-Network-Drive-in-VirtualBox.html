@@ -1,0 +1,32 @@
+---
+layout: post
+title:  "Setting up a Mapped Network Drive in VirtualBox"
+date:   2011-02-02 15:44:00
+tags: backup virtualbox windowsxp
+---
+
+I've set up a Windows XP virtual machine in VirtualBox to do .NET development.  I want my work to be backed up by my host machine's backup software, but the 10GB virtual hard drives wreck havoc as the whole thing needs to be uploaded every time a single file on the virtual machine changes.  To avoid this, I've set up a shared folder in the VirtualBox VM configuration, and in the VM I've mapped the share to a network drive.  this way all the files on that mapped drive are stored on the file system of the host machine and can be backed up separately from the large virtual hard drive.<br />
+<div>
+<br /></div>
+<div>
+The steps were as follows:</div>
+<div>
+<ol>
+<li>Create a folder on the host machine to serve as the VM's network share (all mine are under ~/VirtualBox/Shares)</li>
+<li>With the WinXP VM powered off, open up it's settings form the VirtualBox main console (right-click -&gt; Settings)</li>
+<li>Under 'Shared Folders', click the 'Add Shared Folder' button</li>
+<li>Set the Folder Path to the folder you created above, note the Folder Name if you don't change it, and make sure the share is not marked as read-only.  Click OK.</li>
+<li>Power on the VM.</li>
+<li>In Windows Explorer, open the 'Folders' side panel.</li>
+<li>Navigate to 'My Network Places -&gt; Entire Network -&gt; VirtualBox Shared Folders' and open the shared folder you configured above.</li>
+<li>Note (or copy to clipboard) the UNC path to the network share (probably something like "\\VBOXSVR\[folderName]")</li>
+<li>In Windows Explorer, choose "Tools -&gt; Map Network Drive"</li>
+<li>Pick a Drive letter, and paste the UNC path from above into the 'Folder' text box.  Ensure 'Reconnect at logon' is checked, and click 'Finish'.</li>
+</ol>
+</div>
+<div>
+Now you can open 'My Computer' and navigate to the drive letter you selected.  The mapped drive will be there every time you start the VM.</div>
+<div>
+<br /></div>
+<div>
+<i>Update 2/3/2011: Originally I removed the optical drive from the VirtualBox VM configuration so I could add the shared network drive as D: and move the optical to E:.  But when I re-added the optical drive, the VM did not add the optical drive and had trouble mounting the network share to D:.  After some tinkering, I ended up with the optical drive back on D: and mapped the network drive to E:.  No trouble so far.</i></div>
