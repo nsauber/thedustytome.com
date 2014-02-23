@@ -35,8 +35,8 @@ bing_verify:
 # Links to include in top navigation
 # For external links add external: true
 links:
-  - title: All Posts
-    url: /archive
+  - title: RSS
+    url: /feed.xml
 #  - title: Theme Setup
 #    url: /theme-setup
 #  - title: External Link
