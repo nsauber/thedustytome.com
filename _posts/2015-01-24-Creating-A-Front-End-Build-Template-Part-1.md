@@ -1,8 +1,9 @@
 ---
 layout: post
 title:  "Creating a Front-End Build Template, Part 1"
-date:   20150-2-24 16:09:00
+date:   2015-01-24 16:09:00
 #tags: Programming, JavaScript, Automated Build 
+redirect_from: "/20150/02/24/Creating-A-Front-End-Build-Template-Part-1/"
 ---
 
 For a long time I've avoided getting into any "serious" front-end development work... by which I mean, of course, JavaScript (_shudder_). I started hacking on HTML in my teens, but once I got into "real" programming, and especially once I started programming professionally and learned that "proper" development required things like a build script and Continuous Integration server, working in JavaScript always felt like going back to the wild west. No type safety, no unit tests, and endless browser incompatibilities... Why would you spend any more time in that lawless frontier than necessary?!
